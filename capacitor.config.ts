@@ -1,9 +1,15 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.jaybluecreations.vacationdsd',
   appName: 'VacationDSD',
-  webDir: 'dist'
+  webDir: 'dist',
+  plugins: {
+    CapacitorUpdater: {
+      autoUpdate: true,
+      appReadyTimeout: 10000,
+    }
+  }
 };
 
 export default config;
