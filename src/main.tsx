@@ -1,10 +1,4 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
+import { CapacitorUpdater } from '@capgo/capacitor-updater';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+// Notify Capgo native layer that the app loaded successfully
+CapacitorUpdater.notifyAppReady();
